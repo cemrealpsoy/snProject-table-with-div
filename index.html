@@ -1,0 +1,83 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css"
+  />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker3.css">
+  <link rel="stylesheet" type="text/css" href="snProject.css">
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+  <script language="javascript" type="text/javascript" src="content.js"></script>
+  <script language="javascript" type="text/javascript" src="mainPage.js"></script>
+  <script language="javascript" type="text/javascript" src="loginPage.js"></script>
+</head>
+
+<body class="bodyClass">
+  <div id="contentDiv">
+  </div>
+  <div id="addRecordModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title"><b>New Record</b></h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="frmAddSampleRecord" action="#">
+            <div class="form-group required">
+              <label class="control-label" for="type">Type</label>
+              <input type="text" name="type" class="form-control" id="type" required>
+            </div>
+            <div class="form-group required">
+              <label class="control-label" for="extdesc">Ext Desc</label>
+              <input type="text" class="form-control" name="extdesc" id="extdesc" required>
+            </div>
+            <div class="form-group required">
+              <label class="control-label" for="description">Description</label>
+              <input type="text" class="form-control" name="description" id="description" required>
+            </div>
+            <div class="form-group required">
+              <label class="control-label" for="amount">Amount</label>
+              <input type="number" step="any" class="form-control" name="amount" id="amount" required>
+            </div>
+            <div class="form-group required">
+              <label class="control-label" for="differed">Differed</label>
+              <select class="form-control" id="differed" name="differed" required>
+                <option value="1">true</option>
+                <option value="0">false</option>
+              </select>
+            </div>
+            <div class="form-group required">
+              <label class="control-label" for="date">Date</label>
+              <div class='input-group date datepicker' id="datepicker">
+                <input type='text' class="form-control" id="date" name="date" required/>
+                <span class="input-group-addon">
+                 <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+               </div>
+            </div>
+            <input id="recordId" type="text" value="-1" hidden>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button id="btnAddNewRecord" type="button" class="btn btn-sn">Add</button>
+          <button type="button" class="btn btn-sn" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="alertInfo" class="custom-info alert alert-info">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Info!</strong>It's so easy! Username and Password are both 'admin' :)
+  </div>
+</body>
+
+</html>
